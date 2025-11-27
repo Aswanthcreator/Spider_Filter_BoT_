@@ -1,15 +1,13 @@
 services:
-  # A Docker web service
   - type: web
     name: Auto-search-tamil-bot
     env: python
+    runtime: python-3.10.8
     startCommand: python3 bot.py
     buildCommand: pip3 install -U -r requirements.txt
-    repo: https://github.com/TeamHMT/Auto-search-tamil-bot.git # optional
-    region: oregon # optional (defaults to oregon)
-    plan: free # optional (defaults to starter)
-    branch: web # optional (defaults to master)
-    numInstances: 1 # optional (defaults to 1)
+    repo: https://github.com/TeamHMT/Auto-search-tamil-bot.git
+    region: oregon
+    plan: free
+    branch: web
+    numInstances: 1
     healthCheckPath: /
-
-#End of yaml
